@@ -20,10 +20,10 @@ class UserSeeder extends Seeder
 
         $user = User::create([
             'name' => 'Mayank Dudakiya',
-            'user_name' => 'mayank.dudakiya',
+            'username' => 'mayank.dudakiya',
             'email' => 'mayanksdudakiya@gmail.com',
             'user_role' => config('settings.roles.admin'),
-            'password' => config('settings.password.admin'),
+            'password' => bcrypt(config('settings.password.admin')),
         ]);
     }
 }
